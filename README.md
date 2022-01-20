@@ -70,13 +70,6 @@ Can download at https://www.postman.com/downloads/
 Post Request URL  http://localhost:3000/api/books
 Response Post /localhost:3000/api/books  ---- 200
 
-
-
-
-
-
-
-
 **RESTful API's**
 
 Adding Book -  POST Request  - URL  http://localhost:3000/api/users
