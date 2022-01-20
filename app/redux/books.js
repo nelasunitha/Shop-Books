@@ -54,17 +54,18 @@ export const createBooks = (book) => {
       console.log("created", created);
 
       dispatch(addBook(created));
+      history.push('/books');
 
     } catch (error) {
       console.log(error);
     }
   };
 };
-export const deleteBook = (id) => {
+export const deleteBook = (id,history) => {
   return async (dispatch) => {
     const { data: book } = await axios.delete(`/api/books/${id}`);
     dispatch(removeBook(book));
-    // history.push("/");
+    history.push('/books');
   };
 };
 
@@ -72,7 +73,7 @@ export const updateBook = (book, history) => {
   return async (dispatch) => {
     const { data: updated } = await axios.put(`/api/books/${book[0]}`, book);
     dispatch(editBook(updated));
-    history.push("/");
+    history.push('/books');
   };
 };
 

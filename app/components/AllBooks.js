@@ -2,20 +2,22 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import AddBook from "./AddBook"
+import Searchbar from "./Searchbar"
 
 import { fetchBooks, deleteBook } from "../redux/books";
 
 // Notice that we're exporting the AllBooks component twice. The named export
 // (below) is not connected to Redux, while the default export (at the very
 // bottom) is connected to Redux. Our tests should cover _both_ cases.
+
 let container = {
   'height': '100vh',
   'width': '100vw',
-  'overflowY': 'scroll',
   'display': 'flex',
-  'flexFlow': ''
-}
+  'flexFlow': 'rowWrap',
+  'backgroundColor':'#ffffb3',
 
+}
 export class AllBooks extends React.Component {
   componentDidMount() {
     this.props.fetchBooks();
@@ -24,9 +26,12 @@ export class AllBooks extends React.Component {
     const books = this.props.books;
     return (
       <div style = {container}>
-        <AddBook> </AddBook>
 
+        <AddBook> </AddBook>
         <h2> Details of Books</h2>
+        <div className='search-bar-container'>
+            {/* <Searchbar></Searchbar> */}
+          </div>
         <ol className = "bg-purple-500-border border-black m-5">
           {books.map((book) => {
             return (
@@ -38,11 +43,6 @@ export class AllBooks extends React.Component {
                 <h3>Genre: {book.genre}</h3>
                 <h3>Published Year: {book.publishedYear}</h3>
                 <h3>Price in $: {book.price}</h3>
-                {/* <img
-                  src={robot.imageUrl}
-                  alt={robot.name}
-                  style={{ width: "150px" }}
-                /> */}
                 <div>
                   Remove
                   <button type = 'button'
@@ -68,10 +68,10 @@ const mapStateToProps = (state) => {
   };
 };
 //mapping state to props
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {``
   return {
     fetchBooks: () => dispatch(fetchBooks()),
-    deleteBook:(id) => dispatch(deleteBook(id)),
+    deleteBook:(id) => dispatch(deleteBook(id,history)),
   };
 };
 //mapping props and dispatching to thunk creator

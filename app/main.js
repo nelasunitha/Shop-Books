@@ -7,10 +7,12 @@ import {BrowserRouter as Router} from 'react-router-dom';
 
 import store from './store';
 import Routes from './components/Routes';
+
 const main = document.getElementById('main')
 
 ReactDOM.render(
   <Router>
+
     <Provider store = {store}>
       <Routes />
     </Provider>

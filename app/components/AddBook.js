@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { createBooks} from "../redux/books";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-//component for creating new robot
+
 class AddBook extends Component {
   constructor() {
     super();
@@ -81,14 +81,17 @@ class AddBook extends Component {
               value={price}
               onChange ={(evt)=> handleChange(evt)}
             />
+
           </p>
-            <button type="submit">Submit</button>
+            <button type="submit" onSubmit={(evt)=> handleSubmit(evt)} >Submit</button>
+
           <Link to="/books">Cancel</Link>
         </form>
       </div>
     );
   }
 }
+
 //mapping props and dispatching to thunk creator
 const mapDispatchToProps = (dispatch, { history }) => ({
   createBooks: (book) => dispatch(createBooks(book, history)),
