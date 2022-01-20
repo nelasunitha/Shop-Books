@@ -51,7 +51,8 @@ Can download at https://www.postman.com/downloads/
 
 
 
-``` json
+``` 
+json
  {
         "id": 1,
         "name": "Pride and Prejudice",
@@ -117,4 +118,4 @@ Need to refresh in UI after adding, updating and deleting to check for the resul
 Currently user can upload and delete individual files, not bulk files
 To view the results without refreshing UI
 Giving Authorization
-Fiterring Books by 'genre', 'authorname'
+Fitering Books by 'genre', 'author name'
