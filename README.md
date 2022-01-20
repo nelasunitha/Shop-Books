@@ -108,7 +108,7 @@ Delete request http://localhost:3000/api/books/22
 Response 200;
  To delete the specific book
 
- UI is also buit for the convinence
+ UI is also built for the convinence
 
 Need to refresh in UI after adding, updating and deleting to check for the results
 
