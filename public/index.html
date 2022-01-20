@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Book</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head >
+  <body>
+    <div id="main"></div>
+    <script defer src="/bundle.js"></script>
+   <script>
+     window.process = {
+      env: {
+        NODE_ENV: 'production'
+      }
+    };
+   </script>
+  </body>
+</html>
