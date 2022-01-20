@@ -1,3 +1,4 @@
+<img width="1440" alt="postgres image" src="https://user-images.githubusercontent.com/80846358/150426073-f8a98b7a-17b5-4e84-9c90-09fa0c7426a4.png">
 # Shopify-Backend
 
 **Requirements**
