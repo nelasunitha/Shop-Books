@@ -2758,11 +2758,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _AddBook__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AddBook */ "./app/components/AddBook.js");
-/* harmony import */ var _Searchbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Searchbar */ "./app/components/Searchbar.js");
-/* harmony import */ var _Searchbar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Searchbar__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _redux_books__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../redux/books */ "./app/redux/books.js");
+/* harmony import */ var _redux_books__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../redux/books */ "./app/redux/books.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2784,7 +2782,6 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 
 
 
@@ -2832,7 +2829,7 @@ var AllBooks = /*#__PURE__*/function (_React$Component) {
       }, books.map(function (book) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
           key: book.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
           to: "/books/".concat(book.id)
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, book.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Author: ", book.author, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Genre: ", book.genre), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Published Year: ", book.publishedYear), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, "Price in $: ", book.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Remove", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
           type: "button",
@@ -2860,10 +2857,10 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   "";
   return {
     fetchBooks: function fetchBooks() {
-      return dispatch((0,_redux_books__WEBPACK_IMPORTED_MODULE_4__.fetchBooks)());
+      return dispatch((0,_redux_books__WEBPACK_IMPORTED_MODULE_3__.fetchBooks)());
     },
     deleteBook: function deleteBook(id) {
-      return dispatch((0,_redux_books__WEBPACK_IMPORTED_MODULE_4__.deleteBook)(id, history));
+      return dispatch((0,_redux_books__WEBPACK_IMPORTED_MODULE_3__.deleteBook)(id, history));
     }
   };
 }; //mapping props and dispatching to thunk creator
@@ -3121,65 +3118,6 @@ var Routes = function Routes() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Routes);
-
-/***/ }),
-
-/***/ "./app/components/Searchbar.js":
-/*!*************************************!*\
-  !*** ./app/components/Searchbar.js ***!
-  \*************************************/
-/***/ (() => {
-
-// import React from 'react';
-// import { connect } from 'react-redux';
-// import { fetchSingleBook } from "../redux/singleBook";
-// export class Searchbar extends React.Component {
-//   constructor() {
-//     super();
-//     this.state = {
-//       name:  "",
-//     };
-//     //binding event handlers
-//     this.handleChange = this.handleChange.bind(this);
-//     // this.handleSubmit = this.handleSubmit.bind(this);
-//   }
-//   handleChange(evt) {
-//     this.setState({
-//       [evt.target.name]: evt.target.value,
-//      });
-//   }
-//   handleSubmit(evt) {
-//     evt.preventDefault();
-//     this.props.searchBooks({ ...this.state });
-//   }
-//   render() {
-//     const { name} = this.state;
-//     const {  handleChange} = this;
-//     return (
-//       <div >
-//         <input
-//             type="text"
-//              name="name"
-//              options={books}
-//              label ={(park) => park.fullName}
-//             value={name}
-//             onChange ={(evt)=> handleChange(evt)}
-//           />
-//       </div>
-//     );
-//   }
-// }
-// const mapState = (state) => {
-//   return {
-//     books: state.books,
-//   };
-// };
-// const mapDispatch = (dispatch) => {
-//   return {
-//     getParks: () => dispatch(fetchSingleBook()),
-//   };
-// };
-// export default connect(mapState, mapDispatch)(Searchbar);
 
 /***/ }),
 

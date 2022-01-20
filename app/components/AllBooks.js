@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import AddBook from "./AddBook"
-import Searchbar from "./Searchbar"
 
 import { fetchBooks, deleteBook } from "../redux/books";
 
