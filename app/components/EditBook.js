@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { updateBook, createBooks } from '../redux/books';
-import { fetchSingleBook, setSingleBook } from '../redux/singleBook';
+import { updateBook} from '../redux/books';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 //component for creating new robot
